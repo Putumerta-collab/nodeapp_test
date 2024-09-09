@@ -11,5 +11,12 @@ app.get('/will', function (req, res) {
 app.get('/ready', function (req, res) {
     res.send('{ "response": " Great!, It works!" }');
 });
+app.get('/merta', function (req, res) {
+    res.send('{ "response": " Hello Merta, How are you? " }');
+});
+app.get('/puja', function (req, res) {
+    res.send('{ "response": "I am Dengang" }');
+});
+
 app.listen(process.env.PORT || 3000);
 module.exports = app;
