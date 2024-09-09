@@ -17,6 +17,8 @@ app.get('/merta', function (req, res) {
 app.get('/puja', function (req, res) {
     res.send('{ "response": "I am Dengang" }');
 });
-
+app.get('/cicd', function (req, res) {
+    res.send('{ "response": " continuous integration and continuous delivery/deployment " }');
+});
 app.listen(process.env.PORT || 3000);
 module.exports = app;
