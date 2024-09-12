@@ -19,10 +19,6 @@ app.get('/puja', function (req, res) {
 });
 app.get('/cicd', function (req, res) {
     res.send('{ "response": " continuous integration and continuous delivery/deployment " }');
-});
-app.get('/jenkins', function (req, res) {
-    res.send('{ "response": " pelayan rakyat hukum runcing kebawah tumpul keatas, budak korporat " }');
-});
 
 app.listen(process.env.PORT || 3000);
 module.exports = app;
