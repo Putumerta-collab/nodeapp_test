@@ -6,16 +6,16 @@ app.get('/', function (req, res) {
 });
 
 app.get('/will', function (req, res) {
-    res.send('{ "response": "Undiksha" }');
+    res.send('{ "response": "Universitas Pendidikan Ganesha" }');
 });
 app.get('/ready', function (req, res) {
     res.send('{ "response": "iam ready!" }');
 });
 app.get('/merta', function (req, res) {
-    res.send('{ "response": " Hello Merta, How are you? " }');
+    res.send('{ "response": " Hello Merta " }');
 });
 app.get('/puja', function (req, res) {
-    res.send('{ "response": "FTK" }');
+    res.send('{ "response": "dengang" }');
 });
 app.get('/cicd', function (req, res) {
     res.send('{ "response": " continuous integration and continuous delivery/deployment " }');
