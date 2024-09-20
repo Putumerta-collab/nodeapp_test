@@ -2,14 +2,14 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-   res.send('{ "response": "Universitas Pendidikan Ganesha. Perguruan tinggi yang menyelenggarakan pendidikan akademik dan dapat menyelenggarakan pendidikan vokasi dalam berbagai rumpun ilmu pengetahuan dan/atau teknologi serta jika memenuhi syarat dapat menyelenggarakan pendidikan profesi. Undiksha memiliki motto “dharmaning sajjana umerdhyaken widyaguna” (kewajiban orang bijaksana adalah mengembangkan ilmu pengetahuan dan pekerti)." }');
+   res.send('{ "response": "1" }');
 });
 
 app.get('/login', function (req, res) {
-   res.send('{ "response": "Universitas Pendidikan Ganesha. Perguruan tinggi yang menyelenggarakan pendidikan akademik dan dapat menyelenggarakan pendidikan vokasi dalam berbagai rumpun ilmu pengetahuan dan/atau teknologi serta jika memenuhi syarat dapat menyelenggarakan pendidikan profesi. Undiksha memiliki motto “dharmaning sajjana umerdhyaken widyaguna” (kewajiban orang bijaksana adalah mengembangkan ilmu pengetahuan dan pekerti)." }');
+   res.send('{ "response": "Universitas Pendidikan Ganesha" }');
 });
 app.get('/will', function (req, res) {
-    res.send('{ "response": "Universitas Pendidikan Ganesha. Perguruan tinggi yang menyelenggarakan pendidikan akademik dan dapat menyelenggarakan pendidikan vokasi dalam berbagai rumpun ilmu pengetahuan dan/atau teknologi serta jika memenuhi syarat dapat menyelenggarakan pendidikan profesi. Undiksha memiliki motto “dharmaning sajjana umerdhyaken widyaguna” (kewajiban orang bijaksana adalah mengembangkan ilmu pengetahuan dan pekerti)." }');
+    res.send('{ "response": "Perguruan tinggi" }');
 });
 app.get('/ready', function (req, res) {
     res.send('{ "response": "iam ready!" }');
