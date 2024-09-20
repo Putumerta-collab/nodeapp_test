@@ -39,6 +39,7 @@ app.get('/', function (req, res) {
             <body>
                 <div class="container">
                     <h1>Welcome to CICD Info</h1>
+                     <img src="https://mlops-guide.github.io/MLOps/CICDML/ci-cd.png" alt="CICD Image" />
                     <p><strong>Continuous Integration and Continuous Delivery/Deployment (CI/CD) with Jenkins to Kubernetes</strong> adalah praktik untuk mengotomatisasi proses pengembangan, pengujian, dan pengiriman aplikasi secara cepat dan konsisten. Jenkins digunakan sebagai alat CI/CD, dan Kubernetes sebagai platform untuk men-deploy dan mengelola container aplikasi.</p>
                     <ul>
                         <li><strong>Continuous Integration (CI):</strong> Proses otomatis untuk mengintegrasikan perubahan kode dari beberapa pengembang secara berkala ke repositori pusat. Jenkins akan secara otomatis melakukan build, pengujian, dan integrasi setiap kali ada perubahan kode yang dikirim (commit) ke repositori seperti GitHub.</li>
