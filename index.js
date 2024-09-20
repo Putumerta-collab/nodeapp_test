@@ -131,7 +131,7 @@ app.get('/login', function (req, res) {
     `);
 });
 app.get('/will', function (req, res) {
-    res.send('{ "response": "Universitas Pendidikan Ganesha" }');
+    res.send('{ "response": "Universitas Pendidikan Ganesha. Perguruan tinggi yang menyelenggarakan pendidikan akademik dan dapat menyelenggarakan pendidikan vokasi dalam berbagai rumpun ilmu pengetahuan dan/atau teknologi serta jika memenuhi syarat dapat menyelenggarakan pendidikan profesi. Undiksha memiliki motto “dharmaning sajjana umerdhyaken widyaguna” (kewajiban orang bijaksana adalah mengembangkan ilmu pengetahuan dan pekerti)." }');
 });
 app.get('/ready', function (req, res) {
     res.send('{ "response": "iam ready!" }');
