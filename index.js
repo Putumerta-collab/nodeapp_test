@@ -145,89 +145,315 @@ app.get('/cicd', function (req, res) {
 app.get('/dashboard', function (req, res) {
     res.send(`
         <html>
-            <head>
-                <title>Dashboard</title>
-                <style>
-                    body {
-                        font-family: Arial, sans-serif;
-                        background-color: #f4f4f9;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    .navbar {
-                        background-color: #007bff;
-                        padding: 15px;
-                        color: white;
-                        text-align: center;
-                        font-size: 1.5em;
-                    }
-                    .container {
-                        width: 80%;
-                        margin: 0 auto;
-                        padding: 20px;
-                    }
-                    .dashboard {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 20px;
-                    }
-                    .card {
-                        flex: 1;
-                        min-width: 250px;
-                        padding: 20px;
-                        background-color: #fff;
-                        border-radius: 8px;
-                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                        text-align: center;
-                    }
-                    .card h2 {
-                        font-size: 2em;
-                        margin-bottom: 10px;
-                    }
-                    .card p {
-                        font-size: 1.2em;
-                        color: #333;
-                    }
-                    .footer {
-                        text-align: center;
-                        padding: 20px;
-                        background-color: #007bff;
-                        color: white;
-                        position: fixed;
-                        width: 100%;
-                        bottom: 0;
-                    }
-                </style>
-            </head>
-            <body>
-                <div class="navbar">
-                    Simple Dashboard
-                </div>
-                <div class="container">
-                    <div class="dashboard">
-                        <div class="card">
-                            <h2>Users</h2>
-                            <p>150</p>
-                        </div>
-                        <div class="card">
-                            <h2>Sales</h2>
-                            <p>$12,000</p>
-                        </div>
-                        <div class="card">
-                            <h2>Orders</h2>
-                            <p>320</p>
-                        </div>
-                        <div class="card">
-                            <h2>Performance</h2>
-                            <p>95%</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer">
-                    &copy; 2024 Simple Dashboard
-                </div>
-            </body>
-        </html>
+ <head>
+  <title>
+   Jenkins Dashboard
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-sans">
+  <div class="flex flex-col h-screen">
+   <!-- Header -->
+   <header class="bg-black text-white flex items-center justify-between p-4">
+    <div class="flex items-center">
+     <img alt="Jenkins logo" class="rounded-full mr-2" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-oJq8Rtnigh75JsWY59SRpAWj.png?st=2024-10-01T02%3A29%3A49Z&amp;se=2024-10-01T04%3A29%3A49Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-30T14%3A43%3A04Z&amp;ske=2024-10-01T14%3A43%3A04Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=GrCcu07fCaNpKK8N6HYPUChnRjgf4eHH6cvvReOhgwU%3D" width="40"/>
+     <span class="text-2xl font-bold">
+      Jenkins
+     </span>
+    </div>
+    <div class="flex items-center space-x-4">
+     <input class="p-2 rounded bg-gray-800 text-white" placeholder="Search (CTRL+K)" type="text"/>
+     <i class="fas fa-question-circle">
+     </i>
+     <i class="fas fa-bell">
+     </i>
+     <i class="fas fa-shield-alt">
+     </i>
+     <span class="bg-yellow-500 text-black rounded-full px-2">
+      1
+     </span>
+     <span class="bg-red-500 text-white rounded-full px-2">
+      2
+     </span>
+     <span>
+      Admin1234
+     </span>
+     <a class="text-white" href="#">
+      log out
+     </a>
+    </div>
+   </header>
+   <!-- Main Content -->
+   <div class="flex flex-1">
+    <!-- Sidebar -->
+    <aside class="bg-white w-64 p-4 border-r">
+     <nav class="space-y-4">
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-home">
+       </i>
+       <span>
+        Dashboard
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-code">
+       </i>
+       <span>
+        Changes
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-play">
+       </i>
+       <span>
+        Build Now
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-cog">
+       </i>
+       <span>
+        Configure
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-trash">
+       </i>
+       <span>
+        Delete Pipeline
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-expand">
+       </i>
+       <span>
+        Full Stage View
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-pen">
+       </i>
+       <span>
+        Rename
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-code-branch">
+       </i>
+       <span>
+        Pipeline Syntax
+       </span>
+      </a>
+      <a class="flex items-center space-x-2 text-gray-700" href="#">
+       <i class="fas fa-sync">
+       </i>
+       <span>
+        Git Polling Log
+       </span>
+      </a>
+     </nav>
+    </aside>
+    <!-- Main Panel -->
+    <main class="flex-1 p-6">
+     <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold flex items-center space-x-2">
+       <i class="fas fa-check-circle text-green-500">
+       </i>
+       <span>
+        Testing Deploy Nodeapp
+       </span>
+      </h1>
+      <div class="flex items-center space-x-4">
+       <span>
+        astunkara
+       </span>
+       <a class="text-gray-700" href="#">
+        Edit description
+       </a>
+       <a class="text-gray-700" href="#">
+        Disable Project
+       </a>
+      </div>
+     </div>
+     <h2 class="mt-8 text-xl font-bold">
+      Stage View
+     </h2>
+     <div class="mt-4">
+      <div class="overflow-x-auto">
+       <table class="min-w-full bg-white border">
+        <thead>
+         <tr>
+          <th class="px-4 py-2 border">
+           Declarative: Checkout SCM
+          </th>
+          <th class="px-4 py-2 border">
+           Checkout Source
+          </th>
+          <th class="px-4 py-2 border">
+           Build image
+          </th>
+          <th class="px-4 py-2 border">
+           Pushing Image
+          </th>
+          <th class="px-4 py-2 border">
+           Deploying App to Kubernetes
+          </th>
+          <th class="px-4 py-2 border">
+           Declarative: Post Actions
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td class="px-4 py-2 border">
+           1s
+          </td>
+          <td class="px-4 py-2 border">
+           1s
+          </td>
+          <td class="px-4 py-2 border">
+           20s
+          </td>
+          <td class="px-4 py-2 border">
+           59s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+         </tr>
+         <tr>
+          <td class="px-4 py-2 border">
+           1s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+          <td class="px-4 py-2 border">
+           6s
+          </td>
+          <td class="px-4 py-2 border">
+           18s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+         </tr>
+         <tr>
+          <td class="px-4 py-2 border">
+           1s
+          </td>
+          <td class="px-4 py-2 border">
+           1s
+          </td>
+          <td class="px-4 py-2 border">
+           2min 21s
+          </td>
+          <td class="px-4 py-2 border">
+           7min 5s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+          <td class="px-4 py-2 border">
+           6s
+          </td>
+         </tr>
+         <tr>
+          <td class="px-4 py-2 border">
+           1s
+          </td>
+          <td class="px-4 py-2 border">
+           1s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+          <td class="px-4 py-2 border">
+           19s
+          </td>
+          <td class="px-4 py-2 border">
+           2s
+          </td>
+          <td class="px-4 py-2 border">
+           5s
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+     <div class="mt-8">
+      <h2 class="text-xl font-bold">
+       Build History
+      </h2>
+      <div class="mt-4">
+       <div class="flex items-center justify-between">
+        <span class="text-gray-700">
+         trend
+        </span>
+        <input class="p-2 rounded bg-gray-200" placeholder="Filter builds..." type="text"/>
+       </div>
+       <ul class="mt-4 space-y-2">
+        <li class="flex items-center justify-between p-2 bg-white border rounded">
+         <span>
+          #45
+         </span>
+         <span>
+          1 Okt 2024 09.14
+         </span>
+         <span>
+          1 commit
+         </span>
+        </li>
+        <li class="flex items-center justify-between p-2 bg-white border rounded">
+         <span>
+          #44
+         </span>
+         <span>
+          1 Okt 2024 08.13
+         </span>
+         <span>
+          1 commit
+         </span>
+        </li>
+        <li class="flex items-center justify-between p-2 bg-white border rounded">
+         <span>
+          #43
+         </span>
+         <span>
+          1 Okt 2024 07.55
+         </span>
+         <span>
+          1 commit
+         </span>
+        </li>
+        <li class="flex items-center justify-between p-2 bg-white border rounded">
+         <span>
+          #42
+         </span>
+         <span>
+          23 Sep 2024 08.29
+         </span>
+         <span>
+          1 commit
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </main>
+   </div>
+  </div>
+ </body>
+</html>
     `);
 });
 
