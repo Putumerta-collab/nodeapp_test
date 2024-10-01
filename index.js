@@ -139,7 +139,7 @@ app.get('/ready', function (req, res) {
     res.send('{ "response": "iam ready!" }');
 });
 app.get('/cicd', function (req, res) {
-    res.send('{ "response": " continuous integration and continuous delivery/deployment " }');
+    res.send('{ "response": " continuous integration, continuous delivery and continuous deployment " }');
 });
 app.listen(process.env.PORT || 3000);
 module.exports = app;
