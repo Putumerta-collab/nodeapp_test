@@ -141,5 +141,96 @@ app.get('/ready', function (req, res) {
 app.get('/cicd', function (req, res) {
     res.send('{ "response": " continuous integration, continuous delivery and continuous deployment " }');
 });
+
+app.get('/dashboard', function (req, res) {
+    res.send(`
+        <html>
+            <head>
+                <title>Dashboard</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f4f4f9;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .navbar {
+                        background-color: #007bff;
+                        padding: 15px;
+                        color: white;
+                        text-align: center;
+                        font-size: 1.5em;
+                    }
+                    .container {
+                        width: 80%;
+                        margin: 0 auto;
+                        padding: 20px;
+                    }
+                    .dashboard {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                    }
+                    .card {
+                        flex: 1;
+                        min-width: 250px;
+                        padding: 20px;
+                        background-color: #fff;
+                        border-radius: 8px;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                        text-align: center;
+                    }
+                    .card h2 {
+                        font-size: 2em;
+                        margin-bottom: 10px;
+                    }
+                    .card p {
+                        font-size: 1.2em;
+                        color: #333;
+                    }
+                    .footer {
+                        text-align: center;
+                        padding: 20px;
+                        background-color: #007bff;
+                        color: white;
+                        position: fixed;
+                        width: 100%;
+                        bottom: 0;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="navbar">
+                    Simple Dashboard
+                </div>
+                <div class="container">
+                    <div class="dashboard">
+                        <div class="card">
+                            <h2>Users</h2>
+                            <p>150</p>
+                        </div>
+                        <div class="card">
+                            <h2>Sales</h2>
+                            <p>$12,000</p>
+                        </div>
+                        <div class="card">
+                            <h2>Orders</h2>
+                            <p>320</p>
+                        </div>
+                        <div class="card">
+                            <h2>Performance</h2>
+                            <p>95%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    &copy; 2024 Simple Dashboard
+                </div>
+            </body>
+        </html>
+    `);
+});
+
+// Jalankan server
 app.listen(process.env.PORT || 3000);
 module.exports = app;
