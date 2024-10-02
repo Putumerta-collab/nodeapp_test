@@ -131,9 +131,7 @@ app.get('/login', function (req, res) {
         </html>
     `);
 });
-app.post('/login', function (req, res) {
-    // Langsung redirect ke dashboard
-    res.redirect('/dashboard');
+
     
 app.get('/will', function (req, res) {
     res.send('{ "response": "Perguruan tinggi" }');
