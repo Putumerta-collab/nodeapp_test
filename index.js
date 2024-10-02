@@ -1,7 +1,5 @@
 var express = require('express');
 var app = express();
-// Middleware untuk parsing body dari POST request
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
     res.send(`
