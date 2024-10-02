@@ -1,11 +1,13 @@
 var express = require('express');
 var app = express();
+// Middleware untuk parsing body dari POST request
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
     res.send(`
         <html>
             <head>
-                <title>CICD Info</title>
+                <title>Materi CICD</title>
                 <style>
                     body {
                         font-family: Arial, sans-serif;
@@ -131,7 +133,10 @@ app.get('/login', function (req, res) {
         </html>
     `);
 });
-
+app.post('/login', function (req, res) {
+    // Langsung redirect ke dashboard
+    res.redirect('/dashboard');
+    
 app.get('/will', function (req, res) {
     res.send('{ "response": "Perguruan tinggi" }');
 });
