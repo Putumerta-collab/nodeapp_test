@@ -5,7 +5,7 @@ app.get('/', function (req, res) {
     res.send(`
         <html>
             <head>
-                <title>Testing</title>
+                <title>Testing Deploy NodeApp</title>
                 <style>
                     body {
                         font-family: Arial, sans-serif;
