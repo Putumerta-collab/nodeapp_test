@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: pmerta22/nodeapp:latest
+        image: pmerta22/nodeapp1:latest
         ports:
         - containerPort: 3000
         
